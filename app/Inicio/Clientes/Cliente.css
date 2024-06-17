@@ -1,0 +1,111 @@
+.clientes-container {
+    padding-left: 107px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2dc8a0;
+  }
+  
+  .search-add-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-right: 15px;
+  }
+  
+  .search-bar {
+    background: #EFEFEF;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    
+  }
+
+  .search-bar img{
+    height: 25px;
+  }
+  
+  .search-bar input {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    background: #EFEFEF;
+  }
+
+  .search-bar input:focus{
+   outline: none;
+  }
+  
+  .search-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background: #222831;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    background-color: #2dc8a0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .clientes-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .clientes-table th, .clientes-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .clientes-table th {
+    background-color: #4E988D;
+    color: #FEFFFF;
+  }
+  
+  .clientes-table td {
+    color: #333;
+  }
+
+  #td_Btns{
+    display: flex;
+    gap: 20px;
+  }
+  
+  .edit-button, .delete-button {
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .edit-button {
+    background: #32C5FF;
+  }
+  
+  .delete-button {
+    background: #FF0000;
+  }
+  
+  .edit-button:hover, .delete-button:hover {
+    opacity: 0.7;
+  }
+
+  .DivTable{
+    overflow-y: hidden;
+  }
+
+  @media (max-width: 600px) {
+
+    .clientes-container{
+        width: 100%;
+    }
+  }
