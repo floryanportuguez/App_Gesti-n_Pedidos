@@ -3,12 +3,12 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/auth'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA60HC9tgMugQYvGHdnlLmsp-D96MGbDAo",
-    authDomain: "imabisabase.firebaseapp.com",
-    projectId: "imabisabase",
-    storageBucket: "imabisabase.appspot.com",
-    messagingSenderId: "92097832767",
-    appId: "1:92097832767:web:00d7dfc5c4711ca403558a"
+  apiKey: process.env.NEXT_FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
   };
 
 if (!firebase.apps.length) {

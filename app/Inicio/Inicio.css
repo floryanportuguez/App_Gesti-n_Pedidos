@@ -82,7 +82,12 @@ header img{
 
     header {
       width: 100%;
+      padding-left: 90px;
       }
+
+    .ContainerIni{
+      padding-left: 90px;
+    }
 
   }
 
@@ -96,9 +101,5 @@ header img{
     .stats{
       justify-content: center;
     }
-
-    header {
-      width: 100%;
-      }
 
   }

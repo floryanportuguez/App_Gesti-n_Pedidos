@@ -13,19 +13,33 @@ export default function Login() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  async function handleLogin(){
+  async function handleLogin() {
     try {
-      await signInWithEmailAndPassword(auth, Correo, Password);
-      router.push("/Inicio");
+      const response = await fetch('/api/ConsultUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: Correo, password: Password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        router.push("/Inicio");
+      } else {
+        const errorData = await response.json();
+        setError(errorData.error);
+      }
     } catch (error) {
       setError("Error al iniciar sesión. Verifique sus credenciales.");
     }
-  };
+  }
 
     return (
 <div className="Container">
       <div className="DivLogin">
-        <Image width={330} height={300} src="/LogoColorFondo.png" alt="logo" className="logo"/>
+        {/* <Image width={330} height={300} src="/LogoColorFondo.png" alt="logo" className="logo"/> */}
+        <Image width={330} height={300} src="/NomEJPFondo.png" alt="logo" className="logo"/>
         <div className="FormDiv">
         <h2>Iniciar Sesión</h2>
         <div className="DivInput">

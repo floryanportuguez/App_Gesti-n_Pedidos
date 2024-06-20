@@ -18,7 +18,8 @@ export default function Navbar() {
             <div className="navbar" ref={sidebarRef}>
                 <div className="logo_content">
                     <div className="logo">
-                    <Image width={150} height={100} src='/LogoColor.png' alt=''/>
+                    {/* <Image width={150} height={100} src='/LogoColor.png' alt=''/> */}
+                    <Image width={150} height={100} src='/NomEJP.png' alt=''/>
                     </div>
                     <img src='https://res.cloudinary.com/dmsoej29n/image/upload/v1718320544/Icons/bx-menu_gz7efr.svg' id='btnNav' ref={btnRef} onClick={toggleSidebar}/>
                 </div>
